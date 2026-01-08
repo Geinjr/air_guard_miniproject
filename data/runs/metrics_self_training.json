@@ -1,0 +1,287 @@
+{
+  "method": "self_training",
+  "data_cfg": {
+    "target_col": "aqi_class",
+    "cutoff": "2017-01-01",
+    "random_state": 42,
+    "leakage_cols": [
+      "PM2.5",
+      "pm25_24h",
+      "datetime"
+    ]
+  },
+  "st_cfg": {
+    "tau": 0.9,
+    "max_iter": 10,
+    "min_new_per_iter": 20,
+    "val_frac": 0.2
+  },
+  "history": [
+    {
+      "iter": 1,
+      "val_accuracy": 0.7569085173501577,
+      "val_f1_macro": 0.7276535169039372,
+      "unlabeled_pool": 324523,
+      "new_pseudo": 52052,
+      "tau": 0.9
+    },
+    {
+      "iter": 2,
+      "val_accuracy": 0.7487066246056783,
+      "val_f1_macro": 0.7193709091138132,
+      "unlabeled_pool": 272471,
+      "new_pseudo": 133751,
+      "tau": 0.9
+    },
+    {
+      "iter": 3,
+      "val_accuracy": 0.7198738170347003,
+      "val_f1_macro": 0.6866795382800354,
+      "unlabeled_pool": 138720,
+      "new_pseudo": 47589,
+      "tau": 0.9
+    },
+    {
+      "iter": 4,
+      "val_accuracy": 0.7138801261829653,
+      "val_f1_macro": 0.6771273433511785,
+      "unlabeled_pool": 91131,
+      "new_pseudo": 17407,
+      "tau": 0.9
+    },
+    {
+      "iter": 5,
+      "val_accuracy": 0.6606309148264984,
+      "val_f1_macro": 0.6024691068797134,
+      "unlabeled_pool": 73724,
+      "new_pseudo": 6065,
+      "tau": 0.9
+    },
+    {
+      "iter": 6,
+      "val_accuracy": 0.6929337539432177,
+      "val_f1_macro": 0.6489040824530766,
+      "unlabeled_pool": 67659,
+      "new_pseudo": 4897,
+      "tau": 0.9
+    },
+    {
+      "iter": 7,
+      "val_accuracy": 0.6995583596214511,
+      "val_f1_macro": 0.6582098210766955,
+      "unlabeled_pool": 62762,
+      "new_pseudo": 4563,
+      "tau": 0.9
+    },
+    {
+      "iter": 8,
+      "val_accuracy": 0.6662460567823344,
+      "val_f1_macro": 0.6099101499383158,
+      "unlabeled_pool": 58199,
+      "new_pseudo": 1901,
+      "tau": 0.9
+    },
+    {
+      "iter": 9,
+      "val_accuracy": 0.6717981072555205,
+      "val_f1_macro": 0.6173117725279701,
+      "unlabeled_pool": 56298,
+      "new_pseudo": 1331,
+      "tau": 0.9
+    },
+    {
+      "iter": 10,
+      "val_accuracy": 0.7293375394321766,
+      "val_f1_macro": 0.6969553050640243,
+      "unlabeled_pool": 54967,
+      "new_pseudo": 6137,
+      "tau": 0.9
+    }
+  ],
+  "test_metrics": {
+    "cutoff": "2017-01-01 00:00:00",
+    "n_train": 0,
+    "n_test": 16671,
+    "accuracy": 0.5421990282526543,
+    "f1_macro": 0.4360301017733679,
+    "report": {
+      "Good": {
+        "precision": 0.8933333333333333,
+        "recall": 0.06492248062015504,
+        "f1-score": 0.12104787714543812,
+        "support": 1032.0
+      },
+      "Hazardous": {
+        "precision": 0.6596858638743456,
+        "recall": 0.6792452830188679,
+        "f1-score": 0.6693227091633466,
+        "support": 1855.0
+      },
+      "Moderate": {
+        "precision": 0.5597235932872655,
+        "recall": 0.8212290502793296,
+        "f1-score": 0.6657162026165716,
+        "support": 4833.0
+      },
+      "Unhealthy": {
+        "precision": 0.555878084179971,
+        "recall": 0.5361642557162856,
+        "f1-score": 0.5458432304038005,
+        "support": 4286.0
+      },
+      "Unhealthy_for_Sensitive_Groups": {
+        "precision": 0.3118440779610195,
+        "recall": 0.09602954755309326,
+        "f1-score": 0.14684080480056477,
+        "support": 2166.0
+      },
+      "Very_Unhealthy": {
+        "precision": 0.4427344309234073,
+        "recall": 0.49499799919967985,
+        "f1-score": 0.46740978651048554,
+        "support": 2499.0
+      },
+      "accuracy": 0.5421990282526543,
+      "macro avg": {
+        "precision": 0.5705332305932237,
+        "recall": 0.44876476939790183,
+        "f1-score": 0.4360301017733679,
+        "support": 16671.0
+      },
+      "weighted avg": {
+        "precision": 0.5407667499478606,
+        "recall": 0.5421990282526543,
+        "f1-score": 0.5044400316211628,
+        "support": 16671.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        67,
+        884,
+        2,
+        8,
+        40,
+        31
+      ],
+      [
+        4,
+        3969,
+        133,
+        478,
+        229,
+        20
+      ],
+      [
+        1,
+        1190,
+        208,
+        606,
+        138,
+        23
+      ],
+      [
+        2,
+        997,
+        256,
+        2298,
+        641,
+        92
+      ],
+      [
+        1,
+        49,
+        66,
+        662,
+        1237,
+        484
+      ],
+      [
+        0,
+        2,
+        2,
+        82,
+        509,
+        1260
+      ]
+    ],
+    "labels": [
+      "Good",
+      "Moderate",
+      "Unhealthy_for_Sensitive_Groups",
+      "Unhealthy",
+      "Very_Unhealthy",
+      "Hazardous"
+    ],
+    "feature_cols": [
+      "No",
+      "year",
+      "month",
+      "day",
+      "hour",
+      "PM10",
+      "SO2",
+      "NO2",
+      "CO",
+      "O3",
+      "TEMP",
+      "PRES",
+      "DEWP",
+      "RAIN",
+      "wd",
+      "WSPM",
+      "station",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "is_weekend",
+      "PM10_lag24",
+      "SO2_lag24",
+      "NO2_lag24",
+      "CO_lag24",
+      "O3_lag24",
+      "TEMP_lag24",
+      "PRES_lag24",
+      "DEWP_lag24",
+      "RAIN_lag24",
+      "WSPM_lag24",
+      "is_labeled"
+    ],
+    "categorical_cols": [
+      "wd",
+      "station"
+    ],
+    "numeric_cols": [
+      "No",
+      "year",
+      "month",
+      "day",
+      "hour",
+      "PM10",
+      "SO2",
+      "NO2",
+      "CO",
+      "O3",
+      "TEMP",
+      "PRES",
+      "DEWP",
+      "RAIN",
+      "WSPM",
+      "hour_sin",
+      "hour_cos",
+      "dow",
+      "is_weekend",
+      "PM10_lag24",
+      "SO2_lag24",
+      "NO2_lag24",
+      "CO_lag24",
+      "O3_lag24",
+      "TEMP_lag24",
+      "PRES_lag24",
+      "DEWP_lag24",
+      "RAIN_lag24",
+      "WSPM_lag24",
+      "is_labeled"
+    ]
+  }
+}

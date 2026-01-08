@@ -1,0 +1,186 @@
+{
+  "cutoff": "2017-01-01 00:00:00",
+  "n_train": 79253,
+  "n_test": 16671,
+  "accuracy": 0.5643332733489292,
+  "f1_macro": 0.44386808673082756,
+  "report": {
+    "Good": {
+      "precision": 0.7333333333333333,
+      "recall": 0.01065891472868217,
+      "f1-score": 0.021012416427889206,
+      "support": 1032.0
+    },
+    "Hazardous": {
+      "precision": 0.8038884192730347,
+      "recall": 0.5126684636118598,
+      "f1-score": 0.6260697827518104,
+      "support": 1855.0
+    },
+    "Moderate": {
+      "precision": 0.5935080405002978,
+      "recall": 0.824746534243741,
+      "f1-score": 0.6902762143908564,
+      "support": 4833.0
+    },
+    "Unhealthy": {
+      "precision": 0.537514209928003,
+      "recall": 0.6619225384974335,
+      "f1-score": 0.5932664157256378,
+      "support": 4286.0
+    },
+    "Unhealthy_for_Sensitive_Groups": {
+      "precision": 0.364572605561277,
+      "recall": 0.1634349030470914,
+      "f1-score": 0.22569333758367868,
+      "support": 2166.0
+    },
+    "Very_Unhealthy": {
+      "precision": 0.5059808612440191,
+      "recall": 0.5078031212484994,
+      "f1-score": 0.5068903535050928,
+      "support": 2499.0
+    },
+    "accuracy": 0.5643332733489292,
+    "macro avg": {
+      "precision": 0.5897995783066609,
+      "recall": 0.4468724125628845,
+      "f1-score": 0.44386808673082756,
+      "support": 16671.0
+    },
+    "weighted avg": {
+      "precision": 0.5683122618400437,
+      "recall": 0.5643332733489292,
+      "f1-score": 0.5289100729005313,
+      "support": 16671.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      11,
+      1015,
+      2,
+      4,
+      0,
+      0
+    ],
+    [
+      3,
+      3986,
+      227,
+      580,
+      37,
+      0
+    ],
+    [
+      0,
+      990,
+      354,
+      778,
+      44,
+      0
+    ],
+    [
+      1,
+      709,
+      300,
+      2837,
+      437,
+      2
+    ],
+    [
+      0,
+      16,
+      80,
+      904,
+      1269,
+      230
+    ],
+    [
+      0,
+      0,
+      8,
+      175,
+      721,
+      951
+    ]
+  ],
+  "labels": [
+    "Good",
+    "Moderate",
+    "Unhealthy_for_Sensitive_Groups",
+    "Unhealthy",
+    "Very_Unhealthy",
+    "Hazardous"
+  ],
+  "feature_cols": [
+    "No",
+    "year",
+    "month",
+    "day",
+    "hour",
+    "PM10",
+    "SO2",
+    "NO2",
+    "CO",
+    "O3",
+    "TEMP",
+    "PRES",
+    "DEWP",
+    "RAIN",
+    "wd",
+    "WSPM",
+    "station",
+    "hour_sin",
+    "hour_cos",
+    "dow",
+    "is_weekend",
+    "PM10_lag24",
+    "SO2_lag24",
+    "NO2_lag24",
+    "CO_lag24",
+    "O3_lag24",
+    "TEMP_lag24",
+    "PRES_lag24",
+    "DEWP_lag24",
+    "RAIN_lag24",
+    "WSPM_lag24",
+    "is_labeled"
+  ],
+  "categorical_cols": [
+    "wd",
+    "station"
+  ],
+  "numeric_cols": [
+    "No",
+    "year",
+    "month",
+    "day",
+    "hour",
+    "PM10",
+    "SO2",
+    "NO2",
+    "CO",
+    "O3",
+    "TEMP",
+    "PRES",
+    "DEWP",
+    "RAIN",
+    "WSPM",
+    "hour_sin",
+    "hour_cos",
+    "dow",
+    "is_weekend",
+    "PM10_lag24",
+    "SO2_lag24",
+    "NO2_lag24",
+    "CO_lag24",
+    "O3_lag24",
+    "TEMP_lag24",
+    "PRES_lag24",
+    "DEWP_lag24",
+    "RAIN_lag24",
+    "WSPM_lag24",
+    "is_labeled"
+  ]
+}
